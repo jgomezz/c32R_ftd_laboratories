@@ -16,6 +16,7 @@ print(mul_vector)
 mul_vector = -5 * mi_vectorB
 print(mul_vector)
 
+# 2x20 + 4x7 + 5x1
 mul_pto_vector = mi_vectorA * mi_vectorB
 print(mul_pto_vector)
 
