@@ -11,3 +11,7 @@ Trafico = np.array([[  0,   50,   30,   20 ],
 
 print(Trafico)
 
+trafico_total = np.sum(Trafico)
+
+print(f"El trafico total es {trafico_total} MB/hora")
+
