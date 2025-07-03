@@ -29,3 +29,27 @@ n50 = Nodo(50)
 n60 = Nodo(60)
 n70 = Nodo(70)
 
+
+# sub-arbol izq.
+n20.izq = n10
+n20.der = n30
+
+# sub-arbol der.
+n60.izq = n50
+n60.der = n70
+
+# arbol total
+n40.izq = n20
+n40.der = n60
+
+raiz = n40
+
+print(raiz) # <__main__.Nodo object at 0x7f87e00f3b80>
+
+def inorden(nodo):
+    if nodo:
+        inorden(nodo.izq)
+        print(nodo.valor, end=" ")
+        inorden(nodo.der)
+
+inorden(raiz)
