@@ -53,3 +53,27 @@ def inorden(nodo):
         inorden(nodo.der)
 
 inorden(raiz)
+
+
+# Search
+'''
+40, 20, 10, 30, 60, 50, 70
+
+            40
+         20     60 
+       10  30 50  70
+
+'''
+
+nros = [40, 20, 10, 30, 60, 50, 70]
+
+# encontrar el valor de 10
+print("\n-----------")
+
+for valor in nros:
+    if valor == 10 :
+        print("numero encontrado")
+    print(valor)
+
+
+
