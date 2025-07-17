@@ -26,3 +26,11 @@ fallos = intentos.count('Fallo')
 print("[Tema 2] Éxitos:", exitos)
 print("[Tema 2] Fallos:", fallos)
 print("[Tema 2] Probabilidad de fallo:", fallos / 200)
+
+# Barras de intentos
+import matplotlib.pyplot as plt
+
+plt.bar(['Éxito', 'Fallo'], [exitos, fallos], color=['green', 'red'])
+plt.title("[Tema 4] Resultados de Accesos")
+plt.ylabel("Cantidad")
+plt.show()
