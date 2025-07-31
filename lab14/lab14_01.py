@@ -1,15 +1,18 @@
 
 
 import numpy as np
-import statistics
+import statistics as stat
 
 ventas = [150, 200, 120, 180, 250, 100, 170]
 
 # Media
-media_ventas = statistics.mean(ventas)
+media_ventas = stat.mean(ventas)
 
 print(f"Media de ventas: {media_ventas:.2f}")
 
-sd = statistics.stdev(ventas)
+sd = stat.stdev(ventas)
 print(f"Desviacion Estandar: {sd:.2f}")
 
+# Rango
+rango_ventas = max(ventas) - min(ventas)
+print(f"Rango de ventas: {rango_ventas:.2f}")
