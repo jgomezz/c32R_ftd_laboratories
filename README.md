@@ -10,3 +10,8 @@ python -m pip install -U numpy
 
 # Install matplotlib
 python -m pip install -U matplotlib
+
+# Install networkx
+python -m pip install networkx
+
+python -m pip install scipy
