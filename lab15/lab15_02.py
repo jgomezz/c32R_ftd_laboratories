@@ -17,7 +17,6 @@ original_message = b"Este es mi mensaje secreto y confidencial para el curso de 
 print(f"Mensaje Original: {original_message.decode()}")
 
 # 3. Encriptar el mensaje
-# Fernet incluye el IV y la autenticación dentro del token encriptado
 encrypted_message = f.encrypt(original_message)
 print(f"Mensaje Encriptado: {encrypted_message.decode()}")
 

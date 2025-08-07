@@ -32,21 +32,14 @@ public_pem = public_key.public_bytes(
     format=serialization.PublicFormat.SubjectPublicKeyInfo
 )
 
-
 print("\nClave Privada (PEM):\n", private_pem.decode())
 print("\nClave Pública (PEM):\n", public_pem.decode())
-
-
-
 
 # 2. Mensaje a encriptar (debe ser pequeño para RSA directamente)
 # RSA se usa comúnmente para encriptar claves simétricas, no mensajes largos.
 # El padding es crucial para la seguridad de RSA.
-original_message = b"Mi_secreto_asimetrico"
-
-
+original_message = b"La proxima semana finalizan las clases de FTD"
 print(f"\nMensaje Original: {original_message.decode()}")
-
 
 # 3. Encriptar el mensaje con la CLAVE PÚBLICA
 encrypted_message = public_key.encrypt(

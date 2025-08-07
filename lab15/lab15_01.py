@@ -29,23 +29,22 @@ def decrypt_caesar(text, shift):
 
 
 
-import sys
+#import sys
 
 if __name__ == "__main__":
 
-    if len(sys.argv) != 3:
-        print("Uso: python lab15_01.py <mensaje> <clave_desplazamiento>")
-        sys.exit(1)
+#   if len(sys.argv) != 3:
+#        print("Uso: python lab15_01.py <mensaje> <clave_desplazamiento>")
+#        sys.exit(1)
 
-
-    message = sys.argv[1]
-    shift_key = int(sys.argv[2])
+#   message = sys.argv[1]
+#   shift_key = int(sys.argv[2])
 
     # --- EJEMPLO RESUELTO ---
     print("--- Experimento 1: Cifrado César ---") 
 
-    #message = "HoLA MUNDO"
-    #shift_key = 3
+    message = "HOLA MUNDO"
+    shift_key = 3
 
     # Encriptar
     encrypted_message = encrypt_caesar(message, shift_key)

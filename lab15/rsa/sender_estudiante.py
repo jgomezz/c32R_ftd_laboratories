@@ -3,15 +3,15 @@ from cryptography.hazmat.primitives.asymmetric import padding
 import base64
 
 # 1. Cargar la clave pública de B desde archivo
-with open("public_key_b.pem", "rb") as f:
-    public_key_b = serialization.load_pem_public_key(f.read())
+with open("public_key_docente.pem", "rb") as f:
+    public_key_docente = serialization.load_pem_public_key(f.read())
 
 # 2. Mensaje a cifrar
-original_message = b"Mensaje secreto para B"
+original_message = b"Entrega del laboratorio 15"
 print(f"\n🔐 A (emisor) - Mensaje original: {original_message.decode()}")
 
-# 3. Cifrar el mensaje con la clave pública de B
-encrypted_message = public_key_b.encrypt(
+# 3. Cifrar el mensaje con la clave pública de docente
+encrypted_message = public_key_docente.encrypt(
     original_message,
     padding.OAEP(
         mgf=padding.MGF1(algorithm=hashes.SHA256()),

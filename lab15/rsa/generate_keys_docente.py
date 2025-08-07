@@ -10,7 +10,12 @@ private_pem = private_key.private_bytes(
         encoding=serialization.Encoding.PEM,
         format=serialization.PrivateFormat.TraditionalOpenSSL,
         encryption_algorithm=serialization.NoEncryption()
-    )
+)
+
+# Guardar clave privada
+with open("private_key_docente.pem", "wb") as f:
+    f.write(private_pem)
+
 
 public_key = private_key.public_key()
 
@@ -19,12 +24,9 @@ public_pem = public_key.public_bytes(
         format=serialization.PublicFormat.SubjectPublicKeyInfo
     )
 
-# Guardar clave privada
-with open("private_key_b.pem", "wb") as f:
-    f.write(private_pem)
-
 # Guardar clave pública
-with open("public_key_b.pem", "wb") as f:
+with open("public_key_docente.pem", "wb") as f:
     f.write(public_pem)
 
-print("🔐 Claves de B generadas y guardadas.")
+
+print("🔐 Claves del docente generadas y guardadas.")
