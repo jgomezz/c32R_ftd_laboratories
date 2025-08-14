@@ -4,14 +4,21 @@
 from PIL import Image
 import piexif, os
 
-entrada = "mi_mascota.jpeg"     # pon tu imagen base
+entrada = "demo.jpeg"     # pon tu imagen base
 salida  = "mi_mascota_modificada.jpeg"
 
-mensaje = "XYZ -->   Curso: FTD | Carrera: C32R | Ciclo: 1er ciclo"
+mensaje = "XYZEEFF -->   Curso: FTD | Carrera: C32R | Ciclo: 1er ciclo"
 
 img = Image.open(entrada)
 
-exif_dict = piexif.load(img.info.get("exif", b""))
+exif_data = img.info.get("Exif")
+
+if exif_data:
+    exif_dict = piexif.load(img.info.get("Exif", b""))
+else :
+    exif_dict = {}
+    exif_dict["Exif"] = {piexif.ExifIFD.UserComment: b""}  # Initialize UserComment if not present
+
 
 # Agregar mensaje a los metadatos EXIF
 exif_dict["Exif"][piexif.ExifIFD.UserComment] = mensaje.encode("utf-8")
