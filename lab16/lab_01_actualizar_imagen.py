@@ -4,7 +4,7 @@
 from PIL import Image
 import piexif, os
 
-entrada = "demo.jpeg"     # pon tu imagen base
+entrada = "mi_perro.jpeg"     # pon tu imagen base
 salida  = "mi_mascota_modificada.jpeg"
 
 mensaje = "XYZEEFF -->   Curso: FTD | Carrera: C32R | Ciclo: 1er ciclo"
